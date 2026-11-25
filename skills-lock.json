@@ -7,6 +7,13 @@
       "sourceType": "github",
       "skillPath": "skills/security-audit/SKILL.md",
       "computedHash": "8513eb3b2c39b8d05ef4f47b32ef4d18280b93a5efb91d8df6272f7435034af5"
+    },
+    "skill-inspector": {
+      "source": "NVIDIA/SkillSpector",
+      "commit": "0205488a8257869cac3054397ddd5a5d29180aab",
+      "sourceType": "github",
+      "skillPath": "skills/skill-inspector/SKILL.md",
+      "computedHash": "4fbef9625f058d6110bb62f3766fc78643da2ee15156be47777ea975b73ca47a"
     }
   }
 }
