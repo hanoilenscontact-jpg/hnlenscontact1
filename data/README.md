@@ -22,3 +22,17 @@ cập nhật hằng ngày (cron 19:30). Cột: date,open,high,low,close,volume.
 ## data/v6_signals.csv
 Lịch sử tín hiệu V6 đã phát: date,symbol (mỗi dòng 1 tín hiệu mua, chon=1).
 Phạm vi: **2026-11-13 → 2026-11-25** (hệ V6 mới bắt đầu chạy từ 13/11/2026) — 17 tín hiệu.
+
+
+## Update 2026-11-27: dữ liệu toàn thị trường (thêm 4 nhóm file)
+
+- `universe_history.csv`: 1521 mã ({'dang_giao_dich': 1295, 'huy_dang_ky_gd': 97, 'chuyen_san': 65, 'huy_bat_buoc': 64}) — nguồn Vietstock corporateaz API + 30 mã KBS gỡ.
+  first_date/last_date lấy từ data thật; mã không fetch được data để trống.
+- `stocks_delisted/`: 159 file (226 mã hủy/chuyển từ Vietstock + 30 mã KBS gỡ; 94 mã VCI không serve giá → chỉ có trong universe).
+  Giá 2020-01-01 → phiên cuối (VCI).
+- `stocks_long/`: 1426 file, lịch sử từ ~2007-11-15 (hoặc ngày GD đầu) → 2026-11-26 (raw VCI gap-chart API, countBack=10000).
+- `corporate_actions.csv`: 9998 sự kiện / 1237 mã (ex_date, type, ratio). Type: DIV=co_tuc_tien, ISS=phat_hanh_quyen hoặc cổ tức bằng cổ phiếu (VCI không phân biệt rõ 2 loại trong event_code).
+  GIỚI HẠN: nguồn là VCI events, chỉ trả ~50 sự kiện gần nhất/mã — với mã ít sự kiện có thể phủ sâu; mã nhiều giao dịch nội bộ sẽ chỉ có từ ~2022 trở lại. KHÔNG phải lịch sử đầy đủ 2020-2026.
+- 95 mã không fetch được giá nào (niêm yết mới chưa GD, hoặc VCI rỗng): xem universe_history first_date trống.
+
+**Điều chỉnh giá (README quan trọng):** giá stocks_long/stocks_delisted từ VCI gap-chart ("gap-chart" = bỏ gap cổ tức/split) — so khớp giá hiện tại với price_db KBS là khớp, tức có dấu hiệu đã điều chỉnh. NHƯNG không có nhãn điều chỉnh từng dòng — để kiểm tra chính xác, đối chiếu với corporate_actions.csv (đặc biệt 71 mã có phiên nhảy >15,5%).
