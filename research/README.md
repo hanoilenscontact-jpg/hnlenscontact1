@@ -6,3 +6,4 @@ Mỗi thư mục `YYYYMMDD_chude/` gồm: `LUAT_CHOT_TRUOC_*.md` (luật chốt 
 - 20261128_bo_nhom_xa — không mua nhóm xa đường hỗ trợ; mã xa thắng vs thua
 - 20261128_tang_nong — chỉ báo kỹ thuật; tránh mã tăng nóng
 - 20261128_di_len_em — mã đi êm vs lắc
+- 20261128_danh_gia_tin_cay — placebo 200 lần, Deflated Sharpe, bootstrap, chi phí, sức chứa, thiên lệch sống sót
