@@ -14,3 +14,9 @@ Mọi phép thử đều chốt luật trước (file LUAT_CHOT_TRUOC_*.md trong
 - Lỗi mô phỏng chưa sửa: mã bán vì giảm sàn có thể được mua lại tuần sau khi VN-Index dưới MA40.
 - Tiền mặt gửi 5% là giả định cố định cả kỳ, chưa trừ thuế/phí.
 - Hermes: chưa thấy thư mục paper/ trên repo (kiểm ngày 28/11).
+
+## Cập nhật (28/11 chiều): paper trade cho Hermes
+- Phương án chạy thử trên giấy từ 04/12/2026: 20 mã, thay 2 mã yếu nhất/tuần, trendline tuần, bán giảm sàn, lọc MA40 (dưới MA40: không mua mới, bỏ dần 2 mã/tuần). Script: `research/lib/paper_v2.py`; note cho Hermes: `research/hermes/Gui_Hermes_paper_trade_G2_MA40.md`. `paper_trade.py` cũ (bản A, 4 phần vốn) không dùng nữa.
+- Kiểm tra script bằng chạy lại 2012–2026: 1.676 lệnh (backtest 1.686), lãi từng năm cùng dấu và cùng cỡ với backtest. Lãi gộp 3/2013–11/2026 là 21,4%/năm (backtest 18,2%) vì paper giữ nguyên số cổ phiếu (không cân lại 1/20 mỗi ngày): chênh chủ yếu do 2021 (+116% vs +74%). Đây là khác biệt cách chia vốn, không phải chiến lược tốt hơn.
+- Trạng thái hiện tại: VN-Index tuần dưới MA40 khoảng 8,5% (dưới từ 25/09/2026), danh mục lý thuyết 100% tiền mặt; tuần 04/12 có thể chưa có lệnh mua nào.
+- Chưa làm: chưa chạy thật trên Hermes; lịch nghỉ lễ `paper/holidays.txt` do Hermes tạo.
