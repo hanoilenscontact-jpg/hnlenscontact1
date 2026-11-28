@@ -1,0 +1,80 @@
+Tong 2129 lenh | thang 42.4% | lai TB/lenh 2.95% | trung vi -1.26%
+Lai TB lenh thang 16.9% | lenh thua -7.3% | giu TB thang 35 phien, thua 15 phien
+
+Theo ly do ban:
+          n    win    ret    hold
+why                              
+floor   590  0.361  0.026  17.137
+open      8  0.250 -0.032  29.125
+rot    1531  0.449  0.031  25.905
+
+Theo nam (so lenh, ty le thang, lai TB/lenh):
+        n    win    ret
+yr                     
+2013  115  0.452  0.053
+2014  142  0.500  0.030
+2015  158  0.424  0.038
+2016  147  0.490  0.042
+2017  141  0.582  0.083
+2018  167  0.281 -0.009
+2019  148  0.453  0.027
+2020  167  0.479  0.064
+2021  180  0.511  0.071
+2022  159  0.308 -0.036
+2023  159  0.396 -0.002
+2024  154  0.396  0.029
+2025  164  0.396  0.045
+2026  128  0.273 -0.026
+
+DAC DIEM LUC MUA - TB lenh thang vs thua (trung vi) va Mann-Whitney p (trong mau, mo ta):
+dist      thang     0.985 | thua     0.984 | p=0.714
+rank      thang     5.000 | thua     5.000 | p=0.762
+ret4      thang     0.131 | thua     0.138 | p=0.638
+ret13     thang     0.252 | thua     0.268 | p=0.327
+ret26     thang     0.391 | thua     0.391 | p=0.202
+vol26     thang     0.050 | thua     0.051 | p=0.389
+liq       thang    22.235 | thua    22.303 | p=0.590
+gap       thang     0.000 | thua     0.000 | p=0.229
+margin    thang     0.190 | thua     0.204 | p=0.041
+vni_ma40  thang     0.045 | thua     0.039 | p=0.476
+vni_ret4  thang     0.013 | thua     0.013 | p=0.517
+san       thang     0.070 | thua     0.070 | p=0.785
+
+SAU KHI MUA (mo ta):
+ret5    thang    0.040 | thua   -0.016
+dd10    thang   -0.006 | thua   -0.054
+after5  thang    0.046 | thua   -0.029
+hold    thang   28.000 | thua   10.000
+
+=== WALK-FORWARD CAP LENH (train 3 nam -> test 1 nam, 2016-2026) ===
+dac diem nhom xau (OOS) lai TB phan con lai  chenh  so lenh nhom xau so nam dung dau     t
+    dist                 2.87%        2.60%  0.27%               676            6/11  0.27
+    rank                 2.20%        3.04% -0.83%               674            5/11 -0.86
+    ret4                 2.30%        2.94% -0.64%               632            7/11 -0.65
+   ret13                 2.46%        2.84% -0.38%               606            3/11 -0.39
+   ret26                 2.13%        3.01% -0.88%               594            5/11 -0.91
+   vol26                 2.01%        3.07% -1.06%               595            6/11 -1.08
+     liq                 2.10%        2.98% -0.87%               534            8/11 -0.93
+     gap                 3.69%        2.17%  1.53%               608            3/11  1.57
+  margin                 2.04%        3.14% -1.10%               678           10/11 -1.12
+vni_ma40                 0.91%        2.80% -1.89%               500             4/8 -1.77
+vni_ret4                 3.28%        2.47%  0.80%               501            6/11  0.78
+     san                 2.32%        3.22% -0.90%               973            7/11 -0.93
+
+SAU MUA: lai TB tu ngay 5 den luc ban, theo lai ngay 5 (mo ta, khong dung de chon ma):
+          n  after5    win
+b5                        
+<-8%    164   0.012  0.049
+-8..-4  195   0.035  0.215
+-4..0   566   0.022  0.281
+0..4    435   0.024  0.533
+4..8    259   0.040  0.726
+>8%     295   0.035  0.861
+
+Theo tercile dist/rank/vni_ma40 (toan ky, trong mau): lai TB/lenh va ty le thang
+dist {'thap': {'n': 710, 'win': 0.424, 'ret': 0.028}, 'giua': {'n': 709, 'win': 0.45, 'ret': 0.038}, 'cao': {'n': 710, 'win': 0.399, 'ret': 0.023}}
+vol26 {'thap': {'n': 710, 'win': 0.42, 'ret': 0.032}, 'giua': {'n': 709, 'win': 0.458, 'ret': 0.031}, 'cao': {'n': 710, 'win': 0.394, 'ret': 0.025}}
+gap {'thap': {'n': 1275, 'win': 0.437, 'ret': 0.032}, 'giua': {'n': 144, 'win': 0.444, 'ret': 0.04}, 'cao': {'n': 710, 'win': 0.397, 'ret': 0.024}}
+ret26 {'thap': {'n': 710, 'win': 0.393, 'ret': 0.019}, 'giua': {'n': 709, 'win': 0.465, 'ret': 0.037}, 'cao': {'n': 710, 'win': 0.414, 'ret': 0.033}}
+vni_ma40 {'thap': {'n': 712, 'win': 0.4, 'ret': 0.017}, 'giua': {'n': 708, 'win': 0.449, 'ret': 0.038}, 'cao': {'n': 709, 'win': 0.423, 'ret': 0.033}}
+margin {'thap': {'n': 710, 'win': 0.444, 'ret': 0.037}, 'giua': {'n': 709, 'win': 0.433, 'ret': 0.03}, 'cao': {'n': 710, 'win': 0.396, 'ret': 0.021}}
